@@ -9,6 +9,10 @@ jobs:
     if: ${{ github.repository == 'opendatahub-io/trustyai-explainability' }}
     runs-on: ubuntu-latest
     name: Syncing branch stable
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
